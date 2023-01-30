@@ -31,7 +31,7 @@ function EmiCalScreen() {
     setPay(total);
     setShow(true);
     try {
-      await axios.post('http://localhost:4500/emi/calemi', {
+      await axios.post('https://emi-backend-r60w.onrender.com/emi/calemi', {
         userId,
         email,
         total: {
@@ -49,7 +49,7 @@ function EmiCalScreen() {
   const getData = async() =>{
     try {
       const logemail = result.data.email;
-      const res = await axios.get(`http://localhost:4500/emi/allemi/${logemail}`);
+      const res = await axios.get(`https://emi-backend-r60w.onrender.com/emi/allemi/${logemail}`);
       setEmiInfo(res.data.total);
     } 
     catch (error) {

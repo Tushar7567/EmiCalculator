@@ -11,7 +11,7 @@ function LoginScreen() {
 
   const logIn = async() =>{
     try {
-      const data = await axios.post('http://localhost:4500/home/login',{
+      const data = await axios.post('https://emi-backend-r60w.onrender.com/home/login',{
         email,
         password,
       });

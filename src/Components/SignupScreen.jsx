@@ -21,7 +21,7 @@ function SignupScreen() {
     }
     else{
       try {
-        const data = await axios.post('http://localhost:4500/home/signup', {
+        const data = await axios.post('https://emi-backend-r60w.onrender.com/home/signup', {
           name,
           email,
           password,
